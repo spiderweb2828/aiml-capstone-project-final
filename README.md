@@ -142,12 +142,14 @@ Following models are used to predict the target variable.
    Used GridSearchCV to find the best hyperparameters for the model. Using GridSearchCV and K-neighbors classifier, we found that the optimal number of neighbors is 16. For decision tree classifier, we found that the optimal max_depth is 7. For SVM, we could not find the optimal kernel as there is not enough compute power and it is taking too much time to converge. so used the  SVM classifier is used with default inputs.
 
 7. Model Evaluation
-                            Model     Fit_Time     Score  Max_Depth
-      0       Logistic Regression     0.122869  0.860415        0.0
-      1        K Nearest Neighbor    17.615237  0.860750        0.0
-      2  Decision Tree Classifier    18.542615  0.863199        7.0
-      3      SVM (Default Params)  2230.663658  0.862445        0.0
-      4  Random Forest Classifier     0.460712  0.860178        0.0
+    The following table shows the accuracy and fit time of the models.
+
+                               Model     Fit_Time     Score  Max_Depth
+         0       Logistic Regression     0.122869  0.860415        0.0
+         1        K Nearest Neighbor    17.615237  0.860750        0.0
+         2  Decision Tree Classifier    18.542615  0.863199        7.0
+         3      SVM (Default Params)  2230.663658  0.862445        0.0
+         4  Random Forest Classifier     0.460712  0.860178        0.0
 
 
 8. Conclusion
