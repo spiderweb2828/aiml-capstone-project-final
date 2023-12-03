@@ -34,6 +34,14 @@ Heatmap of the correlation matrix of the selected features:
 
 ![heatmap-keyfeatures.png](images%2Fheatmap-keyfeatures.png)
 
+Count Plot of the target variable (Diabetes_binary):
+
+![count plot.png](images%2Fcount%20plot.png)
+
+Histogram of the target variable (Diabetes_binary):
+
+![hist-output.png](images%2Fhist-output.png)
+
 ### Model Building
 Baseline Model: DummyClassifier makes predictions that ignore the input features.This classifier serves as a simple baseline to compare against other more complex classifiers. **The baseline model has an accuracy of 0.8606709239987386**
 
