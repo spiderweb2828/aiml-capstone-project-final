@@ -65,80 +65,98 @@ Following models are used to predict the target variable.
     <br><br>Confusion Matrix for Decision Tree Classifier<br>
     ![cm-dt.png](images%2Fcm-dt.png)
     
-    <br>Classification report for Decision Tree Classifier model
+    <br>Classification report for Decision Tree Classifier model<br>
 
-              precision    recall  f1-score   support
-
-           0       0.87      0.99      0.92     43667
-           1       0.50      0.09      0.15      7069
-
-    accuracy                           0.86     50736
-   macro avg       0.69      0.54      0.54     50736
-weighted avg       0.82      0.86      0.82     50736
-
-
+                        precision    recall  f1-score   support
+         
+                    0       0.87      0.99      0.92     43667
+                    1       0.50      0.09      0.15      7069
+         
+             accuracy                           0.86     50736
+            macro avg       0.69      0.54      0.54     50736
+         weighted avg       0.82      0.86      0.82     50736
 
 
-3. K Neighbors Classifier
+3. K Nearest Neighbors Classifier
 
-    Optimized the number of neighbors using GridSearchCV. The optimal number of neighbors is 16
-    Mis-classification error for K nearest neighbor model with different values of K
-    ![knn-misclassification-error.png](images%2Fknn-misclassification-error.png)
-    
-    ![cm-knn.png](images%2Fcm-knn.png)
+   Optimized the number of neighbors using GridSearchCV. The optimal number of neighbors is 16
 
-    Classification report for K Neighbors Classifier model
-    
-                precision    recall  f1-score   support
+   <br><br>Mis-classification error for K nearest neighbor model with different values of K<br>
+   ![knn-misclassification-error.png](images%2Fknn-misclassification-error.png)
 
-           0       0.87      0.99      0.92     43667
-           1       0.50      0.09      0.15      7069
+   <br><br>Confusion Matrix for KNN<br>
+   ![cm-knn.png](images%2Fcm-knn.png)
 
-    accuracy                           0.86     50736
-   macro avg       0.69      0.54      0.54     50736
-weighted avg       0.82      0.86      0.82     50736
+   <br>Classification report for K Neighbors Classifier model<br>
+              
+                        precision    recall  f1-score   support
+         
+                    0       0.87      0.99      0.92     43667
+                    1       0.50      0.09      0.15      7069
+         
+             accuracy                           0.86     50736
+            macro avg       0.69      0.54      0.54     50736
+         weighted avg       0.82      0.86      0.82     50736
+
+
+
 
 
 4. Support Vector Classifier
 
-    ![cm-svc.png](images%2Fcm-svc.png)
-        Classification report for Support Vector Classifier model
+   <br><br>Confusion Matrix for SVM<br>
+   ![cm-svc.png](images%2Fcm-svc.png)
+   
+   <br>Classification report for Support Vector Classifier model<br>
+
+                         precision    recall  f1-score   support
+         
+                    0       0.87      0.99      0.93     43667
+                    1       0.57      0.05      0.09      7069
+         
+             accuracy                           0.86     50736
+            macro avg       0.72      0.52      0.51     50736
+         weighted avg       0.83      0.86      0.81     50736
+
     
-                precision    recall  f1-score   support
-
-           0       0.87      0.99      0.93     43667
-           1       0.57      0.05      0.09      7069
-
-    accuracy                           0.86     50736
-   macro avg       0.72      0.52      0.51     50736
-weighted avg       0.83      0.86      0.81     50736
-
+                
 
 5. Random Forest Classifier
 
-    ![cm-rf.png](images%2Fcm-rf.png)
+   <br><br>Confusion Matrix for Randon Forest Classifier<br> 
+   ![cm-rf.png](images%2Fcm-rf.png)
 
-    Classification report for Random Forest Classifier model
+    <br>Classification report for Random Forest Classifier model<br>
+
+                         precision    recall  f1-score   support
+         
+                    0       0.87      0.98      0.92     43667
+                    1       0.49      0.09      0.15      7069
+         
+             accuracy                           0.86     50736
+            macro avg       0.68      0.54      0.54     50736
+         weighted avg       0.82      0.86      0.82     50736
     
-                precision    recall  f1-score   support
 
-           0       0.87      0.98      0.92     43667
-           1       0.49      0.09      0.15      7069
+6. Hyperparameter Tuning
+   Used GridSearchCV to find the best hyperparameters for the model. Using GridSearchCV and K-neighbors classifier, we found that the optimal number of neighbors is 16. For decision tree classifier, we found that the optimal max_depth is 7. For SVM, we could not find the optimal kernel as there is not enough compute power and it is taking too much time to converge. so used the  SVM classifier is used with default inputs.
 
-    accuracy                           0.86     50736
-   macro avg       0.68      0.54      0.54     50736
-weighted avg       0.82      0.86      0.82     50736
-
-
-
-### Model Evaluation
-                      Model     Fit_Time     Score  Max_Depth
-0       Logistic Regression     0.122869  0.860415        0.0
-1        K Nearest Neighbor    17.615237  0.860750        0.0
-2  Decision Tree Classifier    18.542615  0.863199        7.0
-3      SVM (Default Params)  2230.663658  0.862445        0.0
-4  Random Forest Classifier     0.460712  0.860178        0.0
+7. Model Evaluation
+                            Model     Fit_Time     Score  Max_Depth
+      0       Logistic Regression     0.122869  0.860415        0.0
+      1        K Nearest Neighbor    17.615237  0.860750        0.0
+      2  Decision Tree Classifier    18.542615  0.863199        7.0
+      3      SVM (Default Params)  2230.663658  0.862445        0.0
+      4  Random Forest Classifier     0.460712  0.860178        0.0
 
 
-### Conclusion
+8. Conclusion
+   The baseline model has an accuracy of 0.8606709239987386 and compared to the baseline model, the following models have better accuracy.
+    1. K Nearest Neighbor
+    2. Decision Tree Classifier
+    3. SVM (Default Params)
+    4. Random Forest Classifier
+   
+Overall, Decision Tree Classifier has the best accuracy of 0.863199 and the best fit time of 18.542615 seconds. So, Decision Tree Classifier is the best model for this dataset.
+
 ```
