@@ -161,10 +161,10 @@ Following models are used to predict the target variable.
    
 Overall, Decision Tree Classifier has the best accuracy of 0.863199 and the best fit time of 18.542615 seconds. So, Decision Tree Classifier is the best model for this dataset.
 
-9. Findings 
+9. Findings <br>
    XGBoost might have been another choice for this dataset. But, due to the lack of compute power, it is not used for this dataset.  As part of Inferential statistics --  Chi-Square test can be used to find the relationship between the categorical variables.
 
-10. Next Steps and Recommendations 
+10. Next Steps and Recommendations <br>
    Include more features such as food habits, exercise habits, sleep habits, stress levels, etc. to improve the accuracy of the model. Divide and Conquer paradigm can help in solving the large scale problems such as this dataset.With chronics conditions/food diet/physical activity having their own signifcant features, using ensemble techniques might help as well to improve the accuracy of the model.
 
 ```
